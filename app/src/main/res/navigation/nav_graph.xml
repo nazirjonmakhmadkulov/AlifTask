@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/fragmentGuidebook">
+    <fragment
+        android:id="@+id/fragmentGuidebook"
+        android:name="com.nazirjon.aliftask.ui.fragments.GuidebookFragment"
+        android:label="FragmentGuidebook"
+        tools:layout="@layout/fragment_guidebook" >
+        <action
+            android:id="@+id/action_homeFragment_to_dashboardFragment"
+            app:destination="@id/fragmentDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetails"
+        android:name="com.nazirjon.aliftask.ui.fragments.ItemDetailsFragment"
+        android:label="FragmentDetails"
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="guide"
+            app:argType="com.nazirjon.aliftask.data.models.Data" />
+    </fragment>
+</navigation>
